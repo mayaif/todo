@@ -1,38 +1,119 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  color: #242e42;
+  background-color: #f0f1f6;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+h1{
+  color: rgb(51, 49, 35);
   text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-size: 3.5em;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.second-title {
+  color: #6772a7;
+  font-size: 1.1em;
+}
+.todo-container {
+  max-width: 800px;
+  margin: 60px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form, .todo {
+  padding: 15px 20px;
+  margin: 10px 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(52, 52, 50, 0.1)
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.add-task {
+  padding: 4px 8px;
+  flex-grow: 1;
+  margin-right: 16px;
+  border: 1px solid #7d99d2;
+  border-radius: 5px;
+}
+.add-task:focus {
+  outline-color: #56698f;
+  background-color: #fcfcfc;
+}
+
+.todo {
+  display: flex;
+  flex-direction:row;
+  
+}
+
+.add-button {
+  font-size: 16px;
+  background-color: #56698f;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: rgb(51, 49, 35);
+}
+
+.add-button:focus {
+  outline: none;
+}
+.add-button:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+.checkbox{
+  transform: scale(1.4) translateY(1px);
+  margin: 0 16px 0 0;
+  cursor: pointer;
+}
+.todo-text {
+  font-size: 17px;
+  line-height: 24px;
+  margin: 5px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+.todo-actions {
+  display: flex;
+  margin-left: auto;
+}
+.ri-delete-bin-line, .ri-edit-2-line {
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.ri-delete-bin-line{
+  color: #6278a3;
+}
+.ri-delete-bin-line:hover{
+  color: darkred
+}
+.ri-edit-2-line {
+  color: rgb(26, 108, 241);
+  margin-right: 10px;
+}
+.ri-edit-2-line:hover{
+  color: rgb(8, 87, 118);
+}
+.submit-edits {
+  border: none;
+  background-color: #6278a3;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 10px;
+  height: 25px;
+  margin-right: 10px;
 }
